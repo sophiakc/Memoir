@@ -70,6 +70,7 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
         textView.text = ""
         textView.backgroundColor = UIColor.white
         
+        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
         swipeRight.direction = UISwipeGestureRecognizerDirection.right
         self.view.addGestureRecognizer(swipeRight)

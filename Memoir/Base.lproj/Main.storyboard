@@ -92,7 +92,7 @@ of ALL your notes</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oLP-Vl-7Hf">
                                         <rect key="frame" x="0.0" y="376" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Memoir is a personal journal 
+                                        <string key="text">the personal journal 
 of your everyday thoughts</string>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                         <nil key="textColor"/>
@@ -162,6 +162,13 @@ of your everyday thoughts</string>
                                             <segue destination="BYZ-38-t0r" kind="modal" id="KY4-YK-ffc"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Memoir," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2li-bQ-P7G">
+                                        <rect key="frame" x="8" y="361" width="320" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="cNf-KX-Fhc">
@@ -454,7 +461,7 @@ your mind?</string>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Aap-q2-9Tj"/>
-        <segue reference="sij-gA-1k3"/>
-        <segue reference="X2H-rm-bFz"/>
+        <segue reference="ba2-We-0Qc"/>
+        <segue reference="KY4-YK-ffc"/>
     </inferredMetricsTieBreakers>
 </document>

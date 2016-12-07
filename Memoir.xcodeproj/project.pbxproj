@@ -147,10 +147,10 @@
 		9335AB281DF0DE18007D46F4 /* EntryTableView */ = {
 			isa = PBXGroup;
 			children = (
+				9355BBCA1DF2989300A69FBE /* EntryTable.storyboard */,
 				9335AB291DF0DE40007D46F4 /* ComposeViewController.swift */,
 				9335AB2E1DF0E0B9007D46F4 /* SavedEntriesViewController.swift */,
 				9335AB261DF0B91C007D46F4 /* DayTableViewCell.swift */,
-				9355BBCA1DF2989300A69FBE /* EntryTable.storyboard */,
 			);
 			name = EntryTableView;
 			sourceTree = "<group>";
