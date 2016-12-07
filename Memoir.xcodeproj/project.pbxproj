@@ -193,13 +193,6 @@
 			name = "Sign Out";
 			sourceTree = "<group>";
 		};
-		9355BBC91DF2983100A69FBE /* xx */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = xx;
-			sourceTree = "<group>";
-		};
 		936AEC7B1DEFBAE600900831 = {
 			isa = PBXGroup;
 			children = (
@@ -226,18 +219,17 @@
 			isa = PBXGroup;
 			children = (
 				7E7B4F041DF88D7400D6A26C /* Extension */,
+				9335AB2B1DF0DEF9007D46F4 /* Transitions */,
 				936AEC871DEFBAE600900831 /* AppDelegate.swift */,
 				9355BBD61DF4B18000A69FBE /* Common.swift */,
 				936AEC931DEFBAE600900831 /* Info.plist */,
 				936AEC8E1DEFBAE600900831 /* Assets.xcassets */,
 				936AEC901DEFBAE600900831 /* LaunchScreen.storyboard */,
-				9355BBC91DF2983100A69FBE /* xx */,
+				936AEC8B1DEFBAE600900831 /* Main.storyboard */,
 				9335AB3B1DF0FA2E007D46F4 /* Onboarding */,
 				9335AB3C1DF0FA4E007D46F4 /* Sign Out */,
-				9335AB361DF0F934007D46F4 /* Calendar */,
-				936AEC8B1DEFBAE600900831 /* Main.storyboard */,
-				9335AB2B1DF0DEF9007D46F4 /* Transitions */,
 				9335AB281DF0DE18007D46F4 /* EntryTableView */,
+				9335AB361DF0F934007D46F4 /* Calendar */,
 				9335AB1E1DEFF938007D46F4 /* WelcomeViewController.swift */,
 				9335AB201DEFF9CD007D46F4 /* SettingsViewController.swift */,
 			);

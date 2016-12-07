@@ -19,6 +19,8 @@ class SignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstNameField.becomeFirstResponder()
 
         
         // Do any additional setup after loading the view.
