@@ -14,84 +14,142 @@ struct Note {
     var text = String()
 }
 
-class ComposeViewController: UIViewController, UITextViewDelegate {
-    
-    // Outlets
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var saveButton: UIButton!
-    
-    // Variables
-    var fadeTransition: FadeTransition!
+extension String {
+    func numberOfWords()->Int {
+        var addCount = 0
+        var lastCharWasNotPartOfAWord = false
+        for c in self.characters {
+            if String(c) == " " || String(c) == "\n" {
+                if (lastCharWasNotPartOfAWord == false) {
+                    addCount += 1
+                }
+                lastCharWasNotPartOfAWord = true
+            } else {
+                lastCharWasNotPartOfAWord = false
+            }
+        }
+        return addCount + 1
+    }
+}
 
+
+class ComposeViewController: UIViewController, UITextViewDelegate{
+    
+    var fadeTransition: FadeTransition!
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var headerView: UIView!
+    
+    
     
     //Entry Count
-    var entryCount = 0
+    //var notesAll: [Note]!
     
     var textEntered: String!
-    var currentCharacterCount: Int!
-    var originalPostCount: Int!
-    var newPostCount: Int!
+    var currentWordCount: Int = 0
+    var originalPostCount: Int = 1
+    var cumulativePostCount: Int!
+    
+    var lastWordCount: Int!
+    var lastPostCount: Int!
+    
     
     var notes: [Note] = [Note]()
+    
+    var appendedNotes: [Note] = [Note]()
+    
+    var currentNote: Note!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Do any additional setup after loading the view, typically from a nib.
         textView.delegate = self
         textView.becomeFirstResponder()
         textView.text = ""
-        originalPostCount = 0
-    
+        textView.backgroundColor = UIColor.white
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        self.view.addGestureRecognizer(swipeRight)
+        let swipeLeft = UISwipeGestureRecognizer(target:self, action:#selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.view.addGestureRecognizer(swipeLeft)
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeDown.direction = UISwipeGestureRecognizerDirection.down
+        self.view.addGestureRecognizer(swipeDown)
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeUp.direction = UISwipeGestureRecognizerDirection.up
+        self.view.addGestureRecognizer(swipeUp)
+        
+        headerView.backgroundColor = generateRandomRichColor()
+        
     }
-    
     
     func textViewDidEndEditing(_ textView: UITextView) {
         textEntered = textView.text
-        var currentNote = Note()
-        currentNote.date = Date()
-        currentNote.text = textView.text
+        currentNote = Note(date: Date(), text: textView.text)
         
-        notes.append(currentNote)
+        //currentNote.date = Date()
+        //currentNote.text = textView.text
+        
         
         // let dateData = array["date"]
         // let textData = array["text"]
         
-        newPostCount = originalPostCount + 1
-        var count = 0
-        for c in textEntered.characters {
-            if String(c) == " " {
-                count += 1
+        
+        cumulativePostCount = notes.count + 1
+        
+        
+        //ger current word count for current entry
+        let addCount = textEntered.numberOfWords()
+        print("The number of words in my string is \(addCount + 1)")
+        
+        currentWordCount =  addCount + 1
+        
+        //add past word counts to current
+        
+        print(notes, "The notes count is \(cumulativePostCount)")
+        notes.append(currentNote)
+        textView.text = ""
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.right:
+                print("Swiped right")
+            textViewDidEndEditing(textView)
+            headerView.backgroundColor = generateRandomRichColor()
+            case UISwipeGestureRecognizerDirection.down:
+                print("Swiped down")
+                textView.resignFirstResponder()
+                performSegue(withIdentifier: "LastEntrySegue", sender: nil)
+            case UISwipeGestureRecognizerDirection.left:
+                print("Swiped left")
+            case UISwipeGestureRecognizerDirection.up:
+                print("Swiped up")
+            default:
+                break
             }
         }
-        print("The number of words in my string is \(count + 1)")
-        
-        currentCharacterCount = count + 1
-        
-        print(notes)
     }
+
     
     
     /* func textStore() {
      
      //writing to userdefaults
      let defaults = UserDefaults.standard
-     defaults.set(entry, forKey: "SavedEntries")*/
+     defaults.set(entry, forKey: "SavedEntries")
     
     
     //reading from userdefaults
-    // let array = defaults.object(forKey:"SavedArray") as? [String] ?? [String]()
-    //let allEntries = defaults.object(forKey: "SavedEntries") as? [String: String] ?? [String: String]()
+    let array = defaults.object(forKey:"SavedArray") as? [String] ?? [String]()
+    let allEntries = defaults.object(forKey: "SavedEntries") as? [String: String] ?? [String: String]()
+    */
     
-    @IBAction func didTapSave(_ sender: UIButton) {
-        textView.resignFirstResponder()
-        performSegue(withIdentifier: "LastEntrySegue", sender: nil)
-    }
-    
-    @IBAction func onDidPan(_ sender: UIPanGestureRecognizer) {
-        textView.resignFirstResponder()
-        performSegue(withIdentifier: "LastEntrySegue", sender: nil)
-    }
     
     /* @IBAction func didPressSaveButton(_ sender: UIButton) {
      //textStore()
@@ -101,7 +159,7 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
      }*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Access the ComposeViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
         let savedentriesViewController = segue.destination as! SavedEntriesViewController
         
         // Set the modal presentation style of your destinationViewController to be custom.
@@ -114,11 +172,12 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
         savedentriesViewController.transitioningDelegate = fadeTransition
         
         // Adjust the transition duration. (seconds)
-        fadeTransition.duration = 1.0
+        fadeTransition.duration = 0.2
         
         savedentriesViewController.notes = notes
-        savedentriesViewController.newPostCount = newPostCount
-        savedentriesViewController.currentCharacterCount = currentCharacterCount
+        savedentriesViewController.todayPostCount = cumulativePostCount
+        savedentriesViewController.todayWordCount = currentWordCount
+        savedentriesViewController.currentNote = currentNote
         
         
     }
@@ -127,6 +186,26 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func generateRandomRichColor() -> UIColor {
+        // Randomly generate number in closure
+        let hue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        let saturation: CGFloat = 0.65
+        let brightness: CGFloat = 0.50
+        let alpha:CGFloat = 1
+        
+        var tempColor:UIColor
+        tempColor = UIColor.init(hue:hue,
+                                 saturation: saturation,
+                                 brightness: brightness,
+                                 alpha: alpha)
+        return tempColor
+    }
+    
+    @IBAction func didPressSend(_ sender: UIButton) {
+        textViewDidEndEditing(textView)
+        headerView.backgroundColor = generateRandomRichColor()
     }
     
     
