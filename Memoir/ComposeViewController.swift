@@ -206,9 +206,6 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
     }
     
     @IBAction func didPressSend(_ sender: UIButton) {
-        textViewDidEndEditing(textView)
-        headerView.backgroundColor = generateRandomRichColor()
-        
         
         // Calendar connect
         let eventStore = EKEventStore()
@@ -233,6 +230,10 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
         } catch {
             print(error.localizedDescription)
         }
+        
+        // Save text entry into app after sending to calendar
+        textViewDidEndEditing(textView)
+        headerView.backgroundColor = generateRandomRichColor()
     }
     
 }

@@ -40,17 +40,17 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="send" translatesAutoresizingMaskIntoConstraints="NO" id="Cpy-jw-Dbv">
-                                <frame key="frameInset" minX="266" minY="265" width="47" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-ly-ymt">
-                                <frame key="frameInset" minX="275" minY="265" width="29" height="30"/>
+                                <frame key="frameInset" minX="263" minY="253" width="53" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="didPressSend:" destination="R40-tw-1RB" eventType="touchUpInside" id="MAO-Vr-LiN"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendarsync" translatesAutoresizingMaskIntoConstraints="NO" id="Cpy-jw-Dbv">
+                                <frame key="frameInset" minX="259" minY="255" width="61" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -221,8 +221,8 @@
     <resources>
         <image name="Pen" width="20" height="30"/>
         <image name="Settings-1" width="30" height="30"/>
+        <image name="calendarsync" width="422" height="476"/>
         <image name="ellipse-lg" width="1841" height="1842"/>
         <image name="ellipse-sm" width="1138" height="1138"/>
-        <image name="send" width="589" height="563"/>
     </resources>
 </document>
