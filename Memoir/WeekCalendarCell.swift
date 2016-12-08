@@ -2,8 +2,9 @@
 //  WeekCalendarCell.swift
 //  Memoir
 //
-//  Created by Namrata Mohanty on 12/5/16.
-//
+//  Created by Sophia Kecir Camper with help of Charles Hieger on 12/1/16.
+//  Updated by Namrata Mohanty on 12/1/16.
+//  Copyright © 2016 Memoir All rights reserved.
 //
 
 import UIKit

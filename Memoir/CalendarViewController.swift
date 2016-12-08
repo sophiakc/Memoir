@@ -2,18 +2,9 @@
 //  CalendarViewController.swift
 //  Memoir
 //
-//  Created by Namrata Mohanty on 12/1/16.
-//
-//
-
-import UIKit
-
-//
-//  ViewController.swift
-//  CalendarCollectionView
-//
-//  Created by Charles Hieger on 12/1/16.
-//  Copyright © 2016 Charles Hieger. All rights reserved.
+//  Created by Sophia Kecir Camper with help of Charles Hieger on 12/1/16.
+//  Updated by Namrata Mohanty on 12/1/16.
+//  Copyright © 2016 Memoir All rights reserved.
 //
 
 import UIKit
@@ -275,10 +266,10 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBAction func didTapCalControl(_ sender: UISegmentedControl) {
         if calendarControl.selectedSegmentIndex == 0 {
-            performSegue(withIdentifier: "WeeksToDaysSegue", sender: nil)
+            print("correct View")
         }
         else if calendarControl.selectedSegmentIndex == 1{
-            print("correct View")
+            performSegue(withIdentifier: "WeeksToDaysSegue", sender: nil)
         }
         else {
             performSegue(withIdentifier: "WeeksToDaysSegue", sender: nil)
