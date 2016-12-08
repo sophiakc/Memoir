@@ -205,16 +205,12 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
         return tempColor
     }
     
-//    @IBAction func didPressSend(_ sender: UIButton) {
-//        textViewDidEndEditing(textView)
-//        headerView.backgroundColor = generateRandomRichColor()
-//    }
-    
-    
-    
-    // Calendar connect
-
-    @IBAction func didTapSendToCalendar(_ sender: AnyObject) {
+    @IBAction func didPressSend(_ sender: UIButton) {
+        textViewDidEndEditing(textView)
+        headerView.backgroundColor = generateRandomRichColor()
+        
+        
+        // Calendar connect
         let eventStore = EKEventStore()
         let defaultCalendar = eventStore.defaultCalendarForNewEvents
         
@@ -233,13 +229,11 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
         do {
             try eventStore.save(newEvent, span: .thisEvent, commit: true)
             print("calendar event saved yo!")
-            dismiss(animated: true, completion: nil)
+            
         } catch {
             print(error.localizedDescription)
         }
     }
-
     
-
 }
 

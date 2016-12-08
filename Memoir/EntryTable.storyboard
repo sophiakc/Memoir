@@ -48,7 +48,7 @@
                                 <frame key="frameInset" minX="275" minY="265" width="29" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="didTapSendToCalendar:" destination="R40-tw-1RB" eventType="touchUpInside" id="6Tf-2b-NH8"/>
+                                    <action selector="didPressSend:" destination="R40-tw-1RB" eventType="touchUpInside" id="MAO-Vr-LiN"/>
                                 </connections>
                             </button>
                         </subviews>
