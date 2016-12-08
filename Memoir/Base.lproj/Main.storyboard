@@ -237,7 +237,7 @@ of your everyday thoughts</string>
                                 <color key="backgroundColor" red="0.50196078430000002" green="0.0" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SKe-Rj-byg">
-                                <frame key="frameInset" minX="75" minY="249" width="174" height="40"/>
+                                <frame key="frameInset" minX="75" minY="249" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <state key="normal" title="New here? Sign Up!">
@@ -326,7 +326,7 @@ of your everyday thoughts</string>
                                 <color key="backgroundColor" red="0.50196078430000002" green="0.0" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fbm-a1-hkJ">
-                                <frame key="frameInset" minX="73" minY="287" width="174" height="40"/>
+                                <frame key="frameInset" minX="73" minY="287" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <state key="normal" title="Signin instead!">
@@ -460,8 +460,8 @@ your mind?</string>
         <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Aap-q2-9Tj"/>
-        <segue reference="ba2-We-0Qc"/>
-        <segue reference="KY4-YK-ffc"/>
+        <segue reference="X2H-rm-bFz"/>
+        <segue reference="sij-gA-1k3"/>
+        <segue reference="y6j-Mn-SfO"/>
     </inferredMetricsTieBreakers>
 </document>
