@@ -257,6 +257,9 @@
                                 <state key="normal" title="Go to Google Calendar">
                                     <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapGoToCalendar:" destination="cN0-Vw-rGz" eventType="touchUpInside" id="JSm-O4-orb"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="ellipse-lg" id="qJg-Wj-TCp">
                                 <frame key="frameInset" minX="278" minY="258" width="15" height="15"/>

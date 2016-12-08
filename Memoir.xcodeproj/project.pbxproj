@@ -180,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				9335AB221DF03352007D46F4 /* IntroViewController.swift */,
+				9335AB1E1DEFF938007D46F4 /* WelcomeViewController.swift */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
@@ -230,7 +231,6 @@
 				9335AB3C1DF0FA4E007D46F4 /* Sign Out */,
 				9335AB281DF0DE18007D46F4 /* EntryTableView */,
 				9335AB361DF0F934007D46F4 /* Calendar */,
-				9335AB1E1DEFF938007D46F4 /* WelcomeViewController.swift */,
 				9335AB201DEFF9CD007D46F4 /* SettingsViewController.swift */,
 			);
 			path = Memoir;

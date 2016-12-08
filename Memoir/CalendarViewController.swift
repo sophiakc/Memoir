@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import EventKit
 
 class Entry: NSObject {
     var text: String = ""
@@ -92,6 +93,9 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
             print("collection view was tapped")
         }
     }
+    
+    
+    
     
     
     
@@ -237,6 +241,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         
     }
     
+    
     func respondToSwipeGesture(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
@@ -375,18 +380,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         print("selcted cell in column \(indexPath.item)")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
         
-    }
-    
-    
 }
-
-
-
-
-
-
 
 

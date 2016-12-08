@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import EventKit
 
 struct Note {
     var date = Date()
@@ -204,10 +205,41 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
         return tempColor
     }
     
-    @IBAction func didPressSend(_ sender: UIButton) {
-        textViewDidEndEditing(textView)
-        headerView.backgroundColor = generateRandomRichColor()
+//    @IBAction func didPressSend(_ sender: UIButton) {
+//        textViewDidEndEditing(textView)
+//        headerView.backgroundColor = generateRandomRichColor()
+//    }
+    
+    
+    
+    // Calendar connect
+
+    @IBAction func didTapSendToCalendar(_ sender: AnyObject) {
+        let eventStore = EKEventStore()
+        let defaultCalendar = eventStore.defaultCalendarForNewEvents
+        
+        /// Create the event
+        let newEvent = EKEvent(eventStore: eventStore)
+        /// Configure event properties
+        newEvent.calendar = defaultCalendar
+        newEvent.title = "Memoir Journal"
+        newEvent.notes = textView.text ?? "We are doing something"
+        let nowDate = Date()
+        newEvent.startDate = nowDate
+        let halfHourInSeconds = TimeInterval(30 * 60)
+        let halfHourLater = nowDate.addingTimeInterval(halfHourInSeconds)
+        newEvent.endDate = halfHourLater
+        
+        do {
+            try eventStore.save(newEvent, span: .thisEvent, commit: true)
+            print("calendar event saved yo!")
+            dismiss(animated: true, completion: nil)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
+
     
-    
+
 }
+
