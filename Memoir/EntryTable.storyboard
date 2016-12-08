@@ -221,7 +221,7 @@
     <resources>
         <image name="Pen" width="20" height="30"/>
         <image name="Settings-1" width="30" height="30"/>
-        <image name="calendarsync" width="422" height="476"/>
+        <image name="calendarsync" width="211" height="238"/>
         <image name="ellipse-lg" width="1841" height="1842"/>
         <image name="ellipse-sm" width="1138" height="1138"/>
     </resources>

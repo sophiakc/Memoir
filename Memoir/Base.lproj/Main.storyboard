@@ -443,16 +443,16 @@ your mind?</string>
         </scene>
     </scenes>
     <resources>
-        <image name="calendarsync" width="422" height="476"/>
-        <image name="celebrate" width="283" height="244"/>
-        <image name="diary" width="324" height="296"/>
-        <image name="dream" width="338" height="293"/>
-        <image name="feedbacks" width="635" height="606"/>
-        <image name="mind" width="655" height="607"/>
+        <image name="calendarsync" width="211" height="238"/>
+        <image name="celebrate" width="227" height="208"/>
+        <image name="diary" width="270" height="260"/>
+        <image name="dream" width="300" height="284"/>
+        <image name="feedbacks" width="300" height="300"/>
+        <image name="mind" width="294" height="295"/>
         <image name="notepad" width="16" height="16"/>
-        <image name="notextyet" width="316" height="475"/>
-        <image name="peacefulmind" width="2532" height="1476"/>
-        <image name="privacy" width="267" height="291"/>
+        <image name="notextyet" width="158" height="237"/>
+        <image name="peacefulmind" width="1266" height="738"/>
+        <image name="privacy" width="199" height="270"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
