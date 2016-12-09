@@ -269,11 +269,12 @@ class DayCalViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBAction func didTapCalControls(_ sender: UISegmentedControl) {
         if calendarControl.selectedSegmentIndex == 0 {
-            print("correct View")
+            performSegue(withIdentifier: "DaysToWeeksSegue", sender: nil)
+           
             
         }
         else if calendarControl.selectedSegmentIndex == 1{
-            performSegue(withIdentifier: "DaysToWeeksSegue", sender: nil)
+             print("correct View")
         }
         else {
             performSegue(withIdentifier: "DaysToWeeksSegue", sender: nil)

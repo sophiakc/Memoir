@@ -297,7 +297,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
             savedentriesViewController.transitioningDelegate = fadeTransition
             
             // Adjust the transition duration. (seconds)
-            fadeTransition.duration = 0.5
+            fadeTransition.duration = 3.0
             
             savedentriesViewController.notes = appendedNotes
             savedentriesViewController.notes = notes
@@ -337,6 +337,9 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         
         
     }
+    
+  
+    
     
     // From DateHelper file
     func numberOfSections(in collectionView: UICollectionView) -> Int {
