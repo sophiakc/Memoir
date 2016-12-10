@@ -17,5 +17,4 @@ class WeekCalendarCell: UICollectionViewCell {
     @IBOutlet weak var entriesCountView: UIView!
     
 
-    
 }

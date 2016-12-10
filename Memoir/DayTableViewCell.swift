@@ -11,7 +11,6 @@ import UIKit
 class DayTableViewCell: UITableViewCell {
     
     @IBOutlet weak var postTextLabel: UILabel!
-    
     @IBOutlet weak var postDateLabel: UILabel!
     
     override func awakeFromNib() {

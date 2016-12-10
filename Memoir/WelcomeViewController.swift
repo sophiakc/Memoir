@@ -22,10 +22,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //code
-    
 
-        // Do any additional setup after loading the view.
         //add swipe gesture initialisers
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
         swipeRight.direction = UISwipeGestureRecognizerDirection.right
@@ -129,8 +126,6 @@ class WelcomeViewController: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
     
 }
 

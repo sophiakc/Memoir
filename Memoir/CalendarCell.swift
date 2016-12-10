@@ -17,7 +17,4 @@ class CalendarCell: UICollectionViewCell {
     @IBOutlet weak var wordCountView: UIView!
     @IBOutlet weak var entriesCountView: UIView!
     
-    
-    
-    
 }

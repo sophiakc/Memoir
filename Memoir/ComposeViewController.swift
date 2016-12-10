@@ -65,7 +65,7 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         textView.delegate = self
         textView.becomeFirstResponder()
         textView.text = ""
@@ -184,11 +184,6 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
         
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func generateRandomRichColor() -> UIColor {
         // Randomly generate number in closure

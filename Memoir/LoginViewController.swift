@@ -28,8 +28,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardWillHide, object: nil, queue: OperationQueue.main) { (notification: Notification) in
             // Any code you put in here will be called when the keyboard is about to hide
         }
-        
-        // Do any additional setup after loading the view.
+    
     }
     
     @IBAction func didTapNewUser(_ sender: Any) {
@@ -63,24 +62,7 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 print("Welcome, you are logged in")
             }
-      
-           }
+        }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

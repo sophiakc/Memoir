@@ -383,7 +383,5 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         print("selcted cell in column \(indexPath.item)")
     }
     
-        
 }
-
 

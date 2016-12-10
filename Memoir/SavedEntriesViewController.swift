@@ -74,7 +74,6 @@ class SavedEntriesViewController: UIViewController, UITableViewDelegate, UITable
             todayWordCount += aNote.text.numberOfWords()
         }
         
-        // Do any additional setup after loading the view.
         //Set table view to reference needed selves
         self.tableView.reloadData()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
@@ -301,30 +300,12 @@ class SavedEntriesViewController: UIViewController, UITableViewDelegate, UITable
             composeViewController.lastWordCount = todayWordCount
         }
         
-        
-        
-        
     }
     
     @IBAction func didTapCompose(_ sender: UIButton) {
         self.performSegue(withIdentifier: "BackToComposeSegue", sender: nil)
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 
