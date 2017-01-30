@@ -14,17 +14,19 @@
 
 ### App Description
 
-Personal diary linked to a calendar view, stored securely and providing visual feedbacks.
-
-Next implementation: Google Calendar API
+Personal diary sending text entries to iCal, stored securely and providing visual feedbacks in a calendar view.
 
 
 ### Walkthrough demo
 
 ![Memoir](memoir.gif)
 
+### Demo Day Presentation video
+![Memoir DemoDay (Youtube)](https://youtu.be/rCYrLpLH4NQ)
 
 
+### Notes 
+Looking to implement Google Calendar API in the first place, but the official Google documentation is outdated :-(
 
 ## License
 
