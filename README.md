@@ -1,4 +1,4 @@
-# Group Project: *Memoir*
+# Group App Project: *Memoir*
 
 
 **Memoir** has been programmatically animated with Swift (iOS) as a team project for [CodePath iOS for Designers](http://codepath.com/iosfordesigners).
@@ -22,7 +22,7 @@ Personal diary sending text entries to iCal, stored securely and providing visua
 ![Memoir](memoir.gif)
 
 ### Demo Day Presentation video
-![Memoir DemoDay (Youtube)](https://youtu.be/rCYrLpLH4NQ)
+[Memoir DemoDay Video (Youtube)](https://youtu.be/rCYrLpLH4NQ)
 
 
 ### Notes 
